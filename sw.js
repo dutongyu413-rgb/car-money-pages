@@ -1,7 +1,7 @@
 const CACHE_PREFIX = "car-money-pwa-";
 const scopePath = new URL(self.registration.scope).pathname.replace(/\/$/, "");
 const BASE_PATH = scopePath === "" ? "" : scopePath;
-const CACHE_NAME = `${CACHE_PREFIX}v2:${BASE_PATH || "root"}`;
+const CACHE_NAME = `${CACHE_PREFIX}v4:${BASE_PATH || "root"}`;
 
 function scopedPath(path) {
   const absolutePath = path.startsWith("/") ? path : `/${path}`;
@@ -12,6 +12,8 @@ function scopedPath(path) {
 const APP_SHELL = [
   "/",
   "/projects/",
+  "/projects/new/",
+  "/project-detail/",
   "/interests/",
   "/funders/",
   "/vehicles/",
